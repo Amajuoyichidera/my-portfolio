@@ -1,67 +1,67 @@
-const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=8582442a21ce11db2105afa2f41e87d5&page=1';
-const IMG_PATH = 'https://image.tmdb.org/t/p/w500/';
-const SEARCH_API = 'https://api.themoviedb.org/3/discover/movie?api_key=8582442a21ce11db2105afa2f41e87d5&query="';
+/* -----------------------------------------
+  Have focus outline only for keyboard users 
+ ---------------------------------------- */
 
-
-const form = document.getElementById('form');
-const search = document.getElementById('search');
-const main = document.getElementById('main');
-
-getMovies(API_URL)
-async function getMovies(url) {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    showMovies(data.results)
-}
-
-function showMovies (movies) {
-    main.innerHTML = '';
-
-    movies.forEach ((movie) => {
-        const {title, poster_path, vote_average, overview } = movie
-
-        const movieEl = document.createElement('div');
-        movieEl.classList.add('movie')
-        movieEl.innerHTML = `
-      
-        <img src="${IMG_PATH + poster_path}" alt="${title}">
-        <div class="movie-info">
-            <h3>${title}</h3>
-            <span class="green">${vote_average}</span>
-        </div>
-        <div class="overview">
-            <h3>OverView</h3>
-            ${overview}
-        </div>
+ const handleFirstTab = (e) => {
+    if(e.key === 'Tab') {
+      document.body.classList.add('user-is-tabbing')
   
-        `
-        main.appendChild(movieEl)
-    })
-}
-
-function getClassByRate (vote) {
-    if(vote >= 8) {
-        return 'green'
-    }else if (vote >= 5) {
-        return 'orange'
-    }else {
-        return 'red'
+      window.removeEventListener('keydown', handleFirstTab)
+      window.addEventListener('mousedown', handleMouseDownOnce)
     }
+  
+  }
+  
+  const handleMouseDownOnce = () => {
+    document.body.classList.remove('user-is-tabbing')
+  
+    window.removeEventListener('mousedown', handleMouseDownOnce)
+    window.addEventListener('keydown', handleFirstTab)
+  }
+  
+  window.addEventListener('keydown', handleFirstTab)
+  
+  const backToTopButton = document.querySelector(".back-to-top");
+  let isBackToTopRendered = false;
+  
+  let alterStyles = (isBackToTopRendered) => {
+    backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
+    backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
+    backToTopButton.style.transform = isBackToTopRendered
+      ? "scale(1)"
+      : "scale(0)";
+  };
+  
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 700) {
+      isBackToTopRendered = true;
+      alterStyles(isBackToTopRendered);
+    } else {
+      isBackToTopRendered = false;
+      alterStyles(isBackToTopRendered);
+    }
+  });
+
+
+
+  const boxes = document.querySelectorAll(`.box`)
+
+window.addEventListener('scroll',checkbox)
+
+
+checkbox()
+
+function checkbox(){
+   const trigger = window.innerHeight/5 * 4;
+
+  boxes.forEach(box => {
+     const boxtop = box.getBoundingClientRect().top//basically give heigth where we compare whether boxtop value is less than triggerbottom so that we can add show class or remove it.
+
+     if(boxtop<trigger){
+       box.classList.add('show')
+     }else{
+       box.classList.remove('show')
+     }
+  });
+
 }
-
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const searchTerm = search.value
-
-    if(searchTerm && searchTerm !== '') {
-        getMovies(SEARCH_API + searchTerm)
-
-        search.value=''
-        }else{
-            window.location.reload()
-    };
-});
-
-
