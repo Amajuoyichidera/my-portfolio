@@ -23,12 +23,9 @@
   <title>
     David Amajuoyi Portfolio
   </title>
-
-  <meta name="description" content="Add small description of yourslef.">
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="David Amajuoyi, React, HTML, CSS, JavaScript, BOOTSRAP" />
   <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
 
 <body>
 
@@ -38,6 +35,9 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
+            <li class="nav__item">
+                <a href="#" class="nav__link">Home</a>
+              </li>
             <li class="nav__item">
                 <a href="#skills" class="nav__link">Skills</a>
               </li>
@@ -50,7 +50,9 @@
           </li>
         </ul>
       </nav>
+
     </div>
+
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
@@ -71,14 +73,14 @@
      <section class="client" id="skills">
         <div class="row">
           <h2>Skills</h2>
-          <div class="client__logos">
+          <div class="client__logos reveal">
             <!-- Add logos of the clients or companies you'have worked with. -->
-            <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-            <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-            <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-            <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-            <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-            <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" class="client__logo" alt="Company 2" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" class="client__logo" alt="Company 3" />
+            <img src="https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo.jpg" class="client__logo" alt="Company 1" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/800px-React-icon.svg.png" class="client__logo" alt="Company 1" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" class="client__logo" alt="Company 3" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/640px-Tailwind_CSS_Logo.svg.png" class="client__logo" alt="Company 1" />
           </div>
         </div>
       </section>
@@ -88,13 +90,13 @@
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>My Works</h2>
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
               <h3>Easybank landing page</h3>
               <ul class="work__list">
                 <li>HTML</li>
@@ -109,13 +111,34 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="/images/desktop-design.jpg" class="work__image" alt="Project 1" />
             </div>
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
+              <h3>Chirp landing page</h3>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>BOOTSRAP 5</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://beamish-boba-5c7695.netlify.app/" target="_blank" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box reveal">
+              <img src="/images/chirp.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text reveal">
               <h3>Beatbox</h3>
               <p>
                 Beatbox web application, play sound by pressing your keyboard
@@ -132,13 +155,13 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="/images/Screenshot (55).png" class="work__image" alt="Project 1" />
             </div>
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
               <h3>File Downloader</h3>
               <p>
                 file downloader, just paste the link of the file you want to download.
@@ -155,13 +178,36 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="./images/Screenshot (49).png" class="work__image" alt="Project 3" />
             </div>
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
+              <h3>Stop Watch</h3>
+              <p>
+                Basic Stop Watch
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://amajuoyichidera.github.io/stop-watch/" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box reveal">
+              <img src="./images/Screenshot (65).png" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text reveal">
               <h3>TicTacToe Game</h3>
               <p>
                 Unbeatable AI TicTacToe Game.
@@ -178,13 +224,13 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="./images/Screenshot (62).png" class="work__image" alt="Project 3" />
             </div>
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
               <h3>Todolist Web App</h3>
               <p>
                 Todolist App
@@ -201,16 +247,16 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="./images/Screenshot (59).png" class="work__image" alt="Project 3" />
             </div>
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
               <h3>Hosteer</h3>
               <p>
-                Hosteer Website
+                Hosteer Landing Page
               </p>
               <ul class="work__list">
                 <li>HTML</li>
@@ -230,7 +276,76 @@
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
+              <h3>Grocery list</h3>
+              <p>
+                Grocery list Web App
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://sage-starship-161f17.netlify.app/" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box box">
+              <img src="./images/Screenshot (51).png" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text reveal">
+              <h3>Maths Quiz</h3>
+              <p>
+                Basic Maths Quiz Web App
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://amajuoyichidera.github.io/Math-addition-quiz-web-app/" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box box">
+              <img src="./images/Screenshot (44).png" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text reveal">
+              <h3>Word Length Calculator</h3>
+              <p>
+                Word lenghh calculator
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://zippy-florentine-17d1a8.netlify.app/" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box box">
+              <img src="./images/Screenshot (53).png" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text reveal">
               <h3>Calculator</h3>
               <p>
                 Calculator
@@ -248,16 +363,16 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="./images/Screenshot (26).png" class="work__image" alt="Project 3" />
             </div>
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
               <h3>Indiebrew</h3>
               <p>
-                Indiebrew Website
+                Indiebrew Landing Page
               </p>
               <ul class="work__list">
                 <li>HTML</li>
@@ -271,13 +386,13 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="./images/Landing Page - Desktop View.png" class="work__image" alt="Project 3" />
             </div>
           </div>
 
           <div class="work__box">
-            <div class="work__text box">
+            <div class="work__text reveal">
               <h3>Fiber</h3>
               <p>
                 Fiber Website
@@ -294,7 +409,7 @@
                 </a>
               </div>
             </div>
-            <div class="work__image-box box">
+            <div class="work__image-box reveal">
               <img src="./images/7.png" class="work__image" alt="Project 3" />
             </div>
           </div>
@@ -312,18 +427,18 @@
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
-          <div class="about__text">
+          <div class="about__text reveal">
             <!-- Replace the below paragraph with info about yourself -->
             <p>
                 Am a logical and results-driven Front End developer dedicated to building and optimizing user focused websites for customers with various business objectives, judicious and creative when crafting effective websites,apps and platforms to propel competitive advantage and revenue growth, Technically proficient and analytically problem solver with calm and focused demeanor.
             </p>
             <!-- Provide a link to your resume -->
-            <a href="file:///C:/Users/AMAJUOYI/Downloads/Resume-David-Amajuoyi.pdf" class="btn">My Resume</a>
+            <a href="https://docs.google.com/document/d/1Qvo2ELQpZPHmUaRyA4H5b4vWBSzXQDRKj9spzBo6aAY/edit?usp=sharing" class="btn">My Resume</a>
           </div>
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/Screenshot (63).png" alt="" />
+            <img class="about__photo reveal" src="./images/Screenshot (63).png" height="500vh" alt="" />
           </div>
         </div>
       </div>
@@ -345,7 +460,7 @@
           me is via an email.
         </p>
         <!-- Replace the email with yours -->
-        <a href="amajuoyichideradavid@gmail.com" class="btn">amajuoyichideradavid@gmail.com</a>
+        <a href="mailto:amajuoyichideradavid@gmail.com" class="btn">amajuoyichideradavid@gmail.com</a>
       </div>
     </div>
   </section>
