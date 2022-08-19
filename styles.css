@@ -3,6 +3,14 @@
 /* --------------------------------------- */
 
 
+.about__photo, .work__image {
+    border-radius: 10px;
+}
+
+.footer__social-image:hover {
+    transform: translate(0, -10px);
+}
+
 .reveal{
     transform: translateY(150px);
     opacity: 0;
@@ -605,6 +613,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .footer__social-image {
     height: 4rem;
+    transition: .6s;
 }
 
 .footer__github-buttons {
